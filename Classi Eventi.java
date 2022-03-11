@@ -1,102 +1,256 @@
+import java.lang.Enum;
+import java.nio.file.StandardCopyOption;
+
 class Utente{
-    private string Nome;
-    private string Cognome;
-    private string Email;
-    private string Password;
-    private boolean Registrazione;
+    private string nome;
+    private string cognome;
+    private string email;
+    private string password;
+    private boolean registrazione;
     
-    public string Nome(){}
-    public string Cognome(){}
-    public string Email(){}
-    public string Password(){}
-    public boolean Registrazione(){}
-    public string Prenotazione(){}
+    public Utente(string nome_utente, string cognome_utente, string email_utente, string password_utente, boolean registrazione_utente) {
+        nome = nome_utente;
+        cognome = cognome_utente;
+        email = email_utente;
+        password = password_utente;
+        registrazione = registrazione_utente;
+    }
+
+    public string Nome() {
+        return nome;
+    }
+    public string Cognome() {
+        return cognome;
+    }
+    public string Email() {
+        return email;
+    }
+    public string Password() {
+        return password;
+    }
+    public boolean Registrazione() {
+        return registrazione;
+    }
+    //public string Prenotazione() {
+
+    //}
 }
 
-class Organizzatore_Evento{
-    private string Nome;
-    private int Cod_Organizzatore;
+class Organizzatore_Evento {
+    private string nome;
+    private int cod_organizzatore;
     
-    public string Gestione_Evento(){}
-    public string Nome(){}
-    public int Cod_Organizzatore(){}
+    public Organizzatore_Evento(string nome_organizzatore, int codice) {
+        nome = nome_organizzatore;
+        cod_organizzatore = codice;
+    }
+
+    public string Creazione_Evento() {}
+    
+    public string Cancellazione_Evento() {}
+
+    public string Modifica_Evento() {}
+
+    public string Nome() {
+        return nome;
+    }
+
+    public int Cod_Organizzatore() {
+        return cod_organizzatore;
+    }
 }
 
-class Assistenza{
-    private string Nome;
-    private int Cod_Assistente;
-    private int Num_pratiche;
+class Assistenza {
+    private string nome;
+    private int cod_assistente;
+    private int num_pratiche;
     
-    public string Visualizzazione_Utente(){}
-    public int Nome(){}
-    public int Cod_Assistente(){}
-    public int Num_pratiche(){}
+    public Assistenza(string nome_assistenza, int codice, int numero) {
+        nome = nome_assistenza;
+        cod_assistente = codice;
+        num_pratiche = numero;
+    }
+
+    public string Visualizzazione_Utente() {}
+    public int Nome() {
+        return nome;
+    }
+
+    public int Cod_Assistente() {
+        return cod_assistente;
+    }
+
+    public int Num_pratiche() {
+        return num_pratiche;
+    }
 }
 
 class Evento{
-    private string Tipo;
-    private datatime Data;
-    private string Luogo;
-    private int Capacità_Persone;
-    private string Artista;
+ 
+    private tipo_Ammessi tipo;
+    private datatime data;
+    private string luogo;
+    private int capacita_persone;
+    private string artista;
     
-    public string Creazione_Evento(){}
-    public string Cancellazione_Evento(){}
-    public string Modifica_Evento(){}
-    public string Tipo(){}
-    public datatime Data(){}
-    public string Luogo(){}
-    public int Capacità_Persone(){}
+    public Evento(tipo_Ammessi tipo_evento, datatime data_evento, string luogo_evento, int capacita_evento, string artista_evento){
+        tipo = tipo_evento;
+        data = data_evento;
+        luogo = luogo_evento;
+        capacita_persone = capacita_evento;
+        artista = artista_evento;
+    }
+
+    public string Creazione_Evento() {
+
+    }
+    public string Cancellazione_Evento() {
+
+    }
+    public string Modifica_Evento(){
+
+    }
+    public string Tipo() {
+        return tipo;
+    }
+    public enum tipo_Ammessi {
+        evento_musicale, evento_teatrale, evento_comico, evento_sportivo
+    }
+    public datatime Data(){
+        return data;
+    }
+    public string Luogo(){
+        return luogo;
+    }
+    public int Capacita_Persone(){
+        return capacita_persone;
+    }
 }
 
-class Prenotazione{
-    private string Evento;
-    private datatime Data;
-    private string Luogo;
-    private int Num_biglietto;
-    private int Quantità;
-    private string Nominativo;
+class Prenotazione {
+    private string evento;
+    private datatime data;
+    private string luogo;
+    private int num_biglietto;
+    private int quantita;
+    private string nominativo;
     
-    public string prenotazione(){}
-    public int Num_biglietto(){}
-    public string Nominativo(){}
-    public string Tipo_evento(){}
-    public datatime Data(){}
-    public string Luogo(){}
-    public int Quantità(){}
+    public Prenotazione(string evento_prenotato, datatime data_evento, string luogo_evento, int numero, int quantita_evento, string nominativo_evento){
+        evento = evento_prenotato;
+        data = data_evento;
+        luogo = luogo_evento;
+        num_biglietto = numero;
+        quantita = quantita_evento;
+        nominativo = nominativo_evento;
+    }
+
+    public string prenotazione() {}
+
+    public string evento() {
+        return evento;
+    }
+
+    public datatime Data() {
+        return data;
+    }
+
+    public string Luogo() {
+        return luogo;
+    }
+
+    public int Num_biglietto() {
+        return num_biglietto;
+    }
+
+    public int Quantita() {
+        return quantita;
+    }
+
+    public string Nominativo() {
+        return nominativo;
+    }
+
 }
 
 class Artista{
-    private string Nome;
-    private string Cognome;
-    private string Esibizione;
+    private string nome;
+    private string cognome;
+    private string esibizione;
     
-    public string Nome(){}
-    public string Cognome(){}
-    public string Esibizione(){}
+    public Artista (string nome_artista, string cognome_artista, string esibizione_artista) {
+        nome = nome_artista;
+        cognome = cognome_artista;
+        esibizione = esibizione_artista;
+    }
+
+    public string Nome() {
+        return nome;
+    }
+    public string Cognome() {
+        return cognome;
+    }
+    public string Esibizione() {
+        return esibizione;
+    }
 }
 
 class Pagamento{
-    private string Tipo_pagamento;
-    private string Gestione_carta;
-    private int Num_carta;
-    private int Pin;
+    private string tipo_pagamento;
+    private string gestione_carta;
+    private int num_carta;
+    private int pin;
+    private boolean pag;
     
-    public boolean pagamento(){}
-    public string Tipo_pagamento(){}
-    public string Gestione_carta(){}
-    public int Num_carta(){}
-    public int Pin(){}
+    public Pagamento(string tipo, string gest, int carta, int pi, bloolean p) {
+        tipo_pagamento = tipo;
+        gestione_carta = gest;
+        num_carta = carta;
+        pin = pi;
+        pag = p;
+    }
+
+    public boolean pagamento() {
+        return pag;
+    }
+    public string Tipo_pagamento() {
+        return tipo_pagamento;
+    }
+    public string Gestione_carta() {
+        return gestione_carta;
+    }
+    public int Num_carta() {
+        return num_carta;
+    }
+    public int Pin() {
+        return pin;
+    }
 }
 
 class Assistenza_Clienti{
-    private string Nome_Utente;
-    private string Descrizione_Problema;
+    private string nome_utente;
+    private string descrizione_problema;
     
-    public string Prenotazione_assisstita(){}
-    public string Registrazione_assistita(){}
-    public string Pagamento_assistito(){}
-    public string Gestione_Resi(){}
-    public string Nome_Utente(){}
-    public string Descrizione_Problema(){}
+    public Assistenza_Clienti(string nome, string descr){
+        nome_utente = nome;
+        descrizione_problema = descr;
+    }
+
+    public string Prenotazione_assisstita() {
+
+    }
+    public string Registrazione_assistita() {
+
+    }
+    public string Pagamento_assistito() {
+
+    }
+    public string Gestione_Resi() {
+
+    }
+    public string Nome_Utente() {
+        return nome_utente;
+    }
+    public string Descrizione_Problema() {
+        return descrizione_problema;
+    }
 }
