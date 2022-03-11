@@ -1,14 +1,13 @@
 import java.lang.Enum;
-import java.nio.file.StandardCopyOption;
 
 class Utente{
-    private string nome;
-    private string cognome;
-    private string email;
-    private string password;
-    private boolean registrazione;
+    private String nome;
+    private String cognome;
+    private String email;
+    private String password;
+    private Boolean registrazione;
     
-    public Utente(string nome_utente, string cognome_utente, string email_utente, string password_utente, boolean registrazione_utente) {
+    public Utente(String nome_utente, String cognome_utente, String email_utente, String password_utente, Boolean registrazione_utente) {
         nome = nome_utente;
         cognome = cognome_utente;
         email = email_utente;
@@ -16,71 +15,71 @@ class Utente{
         registrazione = registrazione_utente;
     }
 
-    public string Nome() {
+    public String Nome() {
         return nome;
     }
-    public string Cognome() {
+    public String Cognome() {
         return cognome;
     }
-    public string Email() {
+    public String Email() {
         return email;
     }
-    public string Password() {
+    public String Password() {
         return password;
     }
-    public boolean Registrazione() {
+    public Boolean Registrazione() {
         return registrazione;
     }
-    //public string Prenotazione() {
+    //public String Prenotazione() {
 
     //}
 }
 
 class Organizzatore_Evento {
-    private string nome;
-    private int cod_organizzatore;
+    private String nome;
+    private Int cod_organizzatore;
     
-    public Organizzatore_Evento(string nome_organizzatore, int codice) {
+    public Organizzatore_Evento(String nome_organizzatore, Int codice) {
         nome = nome_organizzatore;
         cod_organizzatore = codice;
     }
 
-    public string Creazione_Evento() {}
+    public String Creazione_Evento() {}
     
-    public string Cancellazione_Evento() {}
+    public String Cancellazione_Evento() {}
 
-    public string Modifica_Evento() {}
+    public String Modifica_Evento() {}
 
-    public string Nome() {
+    public String Nome() {
         return nome;
     }
 
-    public int Cod_Organizzatore() {
+    public Int Cod_Organizzatore() {
         return cod_organizzatore;
     }
 }
 
 class Assistenza {
-    private string nome;
-    private int cod_assistente;
-    private int num_pratiche;
+    private String nome;
+    private Int cod_assistente;
+    private Int num_pratiche;
     
-    public Assistenza(string nome_assistenza, int codice, int numero) {
+    public Assistenza(String nome_assistenza, Int codice, Int numero) {
         nome = nome_assistenza;
         cod_assistente = codice;
         num_pratiche = numero;
     }
 
-    public string Visualizzazione_Utente() {}
-    public int Nome() {
+    public String Visualizzazione_Utente() {}
+    public Int Nome() {
         return nome;
     }
 
-    public int Cod_Assistente() {
+    public Int Cod_Assistente() {
         return cod_assistente;
     }
 
-    public int Num_pratiche() {
+    public Int Num_pratiche() {
         return num_pratiche;
     }
 }
@@ -88,12 +87,12 @@ class Assistenza {
 class Evento{
  
     private tipo_Ammessi tipo;
-    private datatime data;
-    private string luogo;
-    private int capacita_persone;
-    private string artista;
+    private Datatime data;
+    private String luogo;
+    private Int capacita_persone;
+    private String artista;
     
-    public Evento(tipo_Ammessi tipo_evento, datatime data_evento, string luogo_evento, int capacita_evento, string artista_evento){
+    public Evento(tipo_Ammessi tipo_evento, Datatime data_evento, String luogo_evento, Int capacita_evento, String artista_evento){
         tipo = tipo_evento;
         data = data_evento;
         luogo = luogo_evento;
@@ -101,41 +100,41 @@ class Evento{
         artista = artista_evento;
     }
 
-    public string Creazione_Evento() {
+    public String Creazione_Evento() {
 
     }
-    public string Cancellazione_Evento() {
+    public String Cancellazione_Evento() {
 
     }
-    public string Modifica_Evento(){
+    public String Modifica_Evento(){
 
     }
-    public string Tipo() {
+    public String Tipo() {
         return tipo;
     }
     public enum tipo_Ammessi {
         evento_musicale, evento_teatrale, evento_comico, evento_sportivo
     }
-    public datatime Data(){
+    public Datatime Data(){
         return data;
     }
-    public string Luogo(){
+    public String Luogo(){
         return luogo;
     }
-    public int Capacita_Persone(){
+    public Int Capacita_Persone(){
         return capacita_persone;
     }
 }
 
 class Prenotazione {
-    private string evento;
-    private datatime data;
-    private string luogo;
-    private int num_biglietto;
-    private int quantita;
-    private string nominativo;
+    private String evento;
+    private Datatime data;
+    private String luogo;
+    private Int num_biglietto;
+    private Int quantita;
+    private String nominativo;
     
-    public Prenotazione(string evento_prenotato, datatime data_evento, string luogo_evento, int numero, int quantita_evento, string nominativo_evento){
+    public Prenotazione(String evento_prenotato, Datatime data_evento, String luogo_evento, Int numero, Int quantita_evento, String nominativo_evento){
         evento = evento_prenotato;
         data = data_evento;
         luogo = luogo_evento;
@@ -144,64 +143,64 @@ class Prenotazione {
         nominativo = nominativo_evento;
     }
 
-    public string prenotazione() {}
+    public String prenotazione() {}
 
-    public string evento() {
+    public String evento() {
         return evento;
     }
 
-    public datatime Data() {
+    public Datatime Data() {
         return data;
     }
 
-    public string Luogo() {
+    public String Luogo() {
         return luogo;
     }
 
-    public int Num_biglietto() {
+    public Int Num_biglietto() {
         return num_biglietto;
     }
 
-    public int Quantita() {
+    public Int Quantita() {
         return quantita;
     }
 
-    public string Nominativo() {
+    public String Nominativo() {
         return nominativo;
     }
 
 }
 
 class Artista{
-    private string nome;
-    private string cognome;
-    private string esibizione;
+    private String nome;
+    private String cognome;
+    private String esibizione;
     
-    public Artista (string nome_artista, string cognome_artista, string esibizione_artista) {
+    public Artista (String nome_artista, String cognome_artista, String esibizione_artista) {
         nome = nome_artista;
         cognome = cognome_artista;
         esibizione = esibizione_artista;
     }
 
-    public string Nome() {
+    public String Nome() {
         return nome;
     }
-    public string Cognome() {
+    public String Cognome() {
         return cognome;
     }
-    public string Esibizione() {
+    public String Esibizione() {
         return esibizione;
     }
 }
 
 class Pagamento{
-    private string tipo_pagamento;
-    private string gestione_carta;
-    private int num_carta;
-    private int pin;
-    private boolean pag;
+    private String tipo_pagamento;
+    private String gestione_carta;
+    private Int num_carta;
+    private Int pin;
+    private Boolean pag;
     
-    public Pagamento(string tipo, string gest, int carta, int pi, bloolean p) {
+    public Pagamento(String tipo, String gest, Int carta, Int pi, bloolean p) {
         tipo_pagamento = tipo;
         gestione_carta = gest;
         num_carta = carta;
@@ -209,48 +208,48 @@ class Pagamento{
         pag = p;
     }
 
-    public boolean pagamento() {
+    public Boolean pagamento() {
         return pag;
     }
-    public string Tipo_pagamento() {
+    public String Tipo_pagamento() {
         return tipo_pagamento;
     }
-    public string Gestione_carta() {
+    public String Gestione_carta() {
         return gestione_carta;
     }
-    public int Num_carta() {
+    public Int Num_carta() {
         return num_carta;
     }
-    public int Pin() {
+    public Int Pin() {
         return pin;
     }
 }
 
 class Assistenza_Clienti{
-    private string nome_utente;
-    private string descrizione_problema;
+    private String nome_utente;
+    private String descrizione_problema;
     
-    public Assistenza_Clienti(string nome, string descr){
+    public Assistenza_Clienti(String nome, String descr){
         nome_utente = nome;
         descrizione_problema = descr;
     }
 
-    public string Prenotazione_assisstita() {
+    public String Prenotazione_assisstita() {
 
     }
-    public string Registrazione_assistita() {
+    public String Registrazione_assistita() {
 
     }
-    public string Pagamento_assistito() {
+    public String Pagamento_assistito() {
 
     }
-    public string Gestione_Resi() {
+    public String Gestione_Resi() {
 
     }
-    public string Nome_Utente() {
+    public String Nome_Utente() {
         return nome_utente;
     }
-    public string Descrizione_Problema() {
+    public String Descrizione_Problema() {
         return descrizione_problema;
     }
 }
