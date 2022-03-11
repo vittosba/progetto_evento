@@ -1,8 +1,4 @@
-//import java.lang.Enum;
 import java.sql.Date;
-
-//public enum tipo_Ammessi {
-    //evento_musicale, evento_teatrale, evento_comico, evento_sportivo}
 
 class Evento {
  
