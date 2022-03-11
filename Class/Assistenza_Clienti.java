@@ -1,3 +1,4 @@
+package Class;
 class Assistenza_Clienti{
     private String nome_utente;
     private String descrizione_problema;

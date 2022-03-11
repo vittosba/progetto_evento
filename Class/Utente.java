@@ -1,3 +1,4 @@
+package Class;
 class Utente{
     private String nome;
     private String cognome;

@@ -1,3 +1,4 @@
+package Class;
 class Organizzatore_Evento {
     private String nome;
     private int cod_organizzatore;
