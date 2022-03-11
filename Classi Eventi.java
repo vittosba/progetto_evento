@@ -1,4 +1,5 @@
-import java.lang.Enum;
+//import java.lang.Enum;
+import javax.xml.crypto.Data;
 
 class Utente{
     private String nome;
@@ -37,62 +38,65 @@ class Utente{
 
 class Organizzatore_Evento {
     private String nome;
-    private Int cod_organizzatore;
+    private int cod_organizzatore;
     
-    public Organizzatore_Evento(String nome_organizzatore, Int codice) {
+    public Organizzatore_Evento(String nome_organizzatore, int codice) {
         nome = nome_organizzatore;
         cod_organizzatore = codice;
     }
 
-    public String Creazione_Evento() {}
+    //public String Creazione_Evento() {}
     
-    public String Cancellazione_Evento() {}
+    //public String Cancellazione_Evento() {}
 
-    public String Modifica_Evento() {}
+    //public String Modifica_Evento() {}
 
     public String Nome() {
         return nome;
     }
 
-    public Int Cod_Organizzatore() {
+    public int Cod_Organizzatore() {
         return cod_organizzatore;
     }
 }
 
 class Assistenza {
     private String nome;
-    private Int cod_assistente;
-    private Int num_pratiche;
+    private int cod_assistente;
+    private int num_pratiche;
     
-    public Assistenza(String nome_assistenza, Int codice, Int numero) {
+    public Assistenza(String nome_assistenza, int codice, int numero) {
         nome = nome_assistenza;
         cod_assistente = codice;
         num_pratiche = numero;
     }
 
-    public String Visualizzazione_Utente() {}
-    public Int Nome() {
+    //public String Visualizzazione_Utente() {}
+    public String Nome() {
         return nome;
     }
 
-    public Int Cod_Assistente() {
+    public int Cod_Assistente() {
         return cod_assistente;
     }
 
-    public Int Num_pratiche() {
+    public int Num_pratiche() {
         return num_pratiche;
     }
 }
 
-class Evento{
+//public enum tipo_Ammessi {
+//    evento_musicale, evento_teatrale, evento_comico, evento_sportivo}
+
+class Evento {
  
-    private tipo_Ammessi tipo;
-    private Datatime data;
+    private String tipo;
+    private Data data;
     private String luogo;
-    private Int capacita_persone;
+    private int capacita_persone;
     private String artista;
     
-    public Evento(tipo_Ammessi tipo_evento, Datatime data_evento, String luogo_evento, Int capacita_evento, String artista_evento){
+    public Evento(String tipo_evento, Data data_evento, String luogo_evento, int capacita_evento, String artista_evento) {
         tipo = tipo_evento;
         data = data_evento;
         luogo = luogo_evento;
@@ -100,41 +104,37 @@ class Evento{
         artista = artista_evento;
     }
 
-    public String Creazione_Evento() {
+    //public String Creazione_Evento() {}
+    //public String Cancellazione_Evento() {}
+    //public String Modifica_Evento() {}
 
-    }
-    public String Cancellazione_Evento() {
-
-    }
-    public String Modifica_Evento(){
-
-    }
     public String Tipo() {
         return tipo;
     }
-    public enum tipo_Ammessi {
-        evento_musicale, evento_teatrale, evento_comico, evento_sportivo
-    }
-    public Datatime Data(){
+
+    public Data Data(){
         return data;
     }
     public String Luogo(){
         return luogo;
     }
-    public Int Capacita_Persone(){
+    public int Capacita_Persone(){
         return capacita_persone;
+    }
+    public String Artista(){
+        return artista;
     }
 }
 
 class Prenotazione {
     private String evento;
-    private Datatime data;
+    private Data data;
     private String luogo;
-    private Int num_biglietto;
-    private Int quantita;
+    private int num_biglietto;
+    private int quantita;
     private String nominativo;
     
-    public Prenotazione(String evento_prenotato, Datatime data_evento, String luogo_evento, Int numero, Int quantita_evento, String nominativo_evento){
+    public Prenotazione(String evento_prenotato, Data data_evento, String luogo_evento, int numero, int quantita_evento, String nominativo_evento) {
         evento = evento_prenotato;
         data = data_evento;
         luogo = luogo_evento;
@@ -143,13 +143,13 @@ class Prenotazione {
         nominativo = nominativo_evento;
     }
 
-    public String prenotazione() {}
+    //public String Prenotazione() {}
 
     public String evento() {
         return evento;
     }
 
-    public Datatime Data() {
+    public Data Data() {
         return data;
     }
 
@@ -157,11 +157,11 @@ class Prenotazione {
         return luogo;
     }
 
-    public Int Num_biglietto() {
+    public int Num_biglietto() {
         return num_biglietto;
     }
 
-    public Int Quantita() {
+    public int Quantita() {
         return quantita;
     }
 
@@ -171,7 +171,7 @@ class Prenotazione {
 
 }
 
-class Artista{
+class Artista {
     private String nome;
     private String cognome;
     private String esibizione;
@@ -193,14 +193,14 @@ class Artista{
     }
 }
 
-class Pagamento{
+class Pagamento {
     private String tipo_pagamento;
     private String gestione_carta;
-    private Int num_carta;
-    private Int pin;
+    private int num_carta;
+    private int pin;
     private Boolean pag;
     
-    public Pagamento(String tipo, String gest, Int carta, Int pi, bloolean p) {
+    public Pagamento(String tipo, String gest, int carta, int pi, boolean p) {
         tipo_pagamento = tipo;
         gestione_carta = gest;
         num_carta = carta;
@@ -217,10 +217,10 @@ class Pagamento{
     public String Gestione_carta() {
         return gestione_carta;
     }
-    public Int Num_carta() {
+    public int Num_carta() {
         return num_carta;
     }
-    public Int Pin() {
+    public int Pin() {
         return pin;
     }
 }
@@ -229,23 +229,16 @@ class Assistenza_Clienti{
     private String nome_utente;
     private String descrizione_problema;
     
-    public Assistenza_Clienti(String nome, String descr){
+    public Assistenza_Clienti(String nome, String descr) {
         nome_utente = nome;
         descrizione_problema = descr;
     }
 
-    public String Prenotazione_assisstita() {
+    //public String Prenotazione_assisstita() {}
+    //public String Registrazione_assistita() {}
+    //public String Pagamento_assistito() {}
+    //public String Gestione_Resi() {}
 
-    }
-    public String Registrazione_assistita() {
-
-    }
-    public String Pagamento_assistito() {
-
-    }
-    public String Gestione_Resi() {
-
-    }
     public String Nome_Utente() {
         return nome_utente;
     }
