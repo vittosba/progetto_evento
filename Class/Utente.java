@@ -5,14 +5,12 @@ class Utente{
     private String email;
     private Boolean email_verificata;
     private String password;
-    private Boolean registrazione;
     
-    public Utente(String nome_utente, String cognome_utente, String email_utente, Boolean email_verificata_utente, String password_utente, Boolean registrazione_utente) {
+    public Utente(String nome_utente, String cognome_utente, String email_utente, Boolean email_verificata_utente, String password_utente) {
         nome = nome_utente;
         cognome = cognome_utente;
         email = email_utente;
         password = password_utente;
-        registrazione = registrazione_utente;
     }
 
     public String Nome() {
@@ -29,9 +27,6 @@ class Utente{
     }
     public String Password() {
         return password;
-    }
-    public Boolean Registrazione() {
-        return registrazione;
     }
     //public String Prenotazione() {}
 }

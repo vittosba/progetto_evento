@@ -1,3 +1,4 @@
+package Class;
 class Utility {
     private static Utility verificaEmail;
     public Utility() {

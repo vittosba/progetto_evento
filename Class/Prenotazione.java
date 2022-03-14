@@ -42,7 +42,7 @@ class Prenotazione {
         return nominativo;
     }
 
-    public Boolean PrenotazionePossibile() {
+    /*public Boolean PrenotazionePossibile() {
         Boolean esito = true;
         int n;
         if(n.num_biglietto() == num_biglietto) {
@@ -62,5 +62,5 @@ class Prenotazione {
 
             return "La prenotazione è avvenuta con successo";
         }
-    }
+    }*/
 }

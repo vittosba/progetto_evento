@@ -1,6 +1,5 @@
-import java.util.Scanner;
-
 package Class;
+import java.util.Scanner;
 class Main{
 
     public static void main(String[] args) {
@@ -14,18 +13,28 @@ class Main{
         do{
             scelta = in.next(); 
         }while (scelta != "si" || scelta != "no");
+        in.close();
         if (scelta == "si"){
             //Registrazione
-            String nome_utente = " ";
-            String cognome_utente = " "; 
-            String email_utente = " "; 
-            Boolean email_verificata_utente = false;
-            String password_utente = " "; 
-            Boolean registrazione_utente = false;
-            
-            Utente newUtente = new Utente(nome_utente, cognome_utente, email_utente, email_verificata_utente, password_utente, registrazione_utente);
+            System.out.println("Inserire email: ");
+            String email_utente = in.next();
+            Utility U = new Utility();
+            U.verificaCorrettezzaEmail(email_utente);
+            Boolean email_verificata_utente = U.verificaCorrettezzaEmail(email_utente);
+            System.out.println("Inserire nome: ");
+            String nome_utente = in.next();
+            System.out.println("Inserire cognome: ");
+            String cognome_utente = in.next();
+            System.out.println("Inserire password: ");
+            String password_utente = in.next();
+            //verifica registrazione tramite file
+            Utente newUtente = new Utente(nome_utente, cognome_utente, email_utente, email_verificata_utente, password_utente);
+
+            System.out.println( newUtente.Nome() + " " + newUtente.Cognome() + " " + newUtente.Email());
         }
+
         System.out.println(" Vuoi Prenotarti? " + "Inserire si o no");
+        
 
         
     }

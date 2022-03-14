@@ -10,11 +10,11 @@ class Assistenza {
         num_pratiche = numero;
     }
 
-    public String Visualizzazione_Utente() {
+    /*public String Visualizzazione_Utente() {
         Utente.Nome();
         Utente.Cognome();
         Utente.Email();
-    }
+    }*/
     public String Nome() {
         return nome;
     }
