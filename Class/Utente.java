@@ -24,7 +24,7 @@ class Utente{
     public String Email() {
         return email;
     }
-    public String Verifica() {
+    public Boolean Verifica() {
         return email_verificata;
     }
     public String Password() {
