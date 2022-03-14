@@ -1,9 +1,6 @@
-import javax.lang.model.util.ElementScanner14;
-
-public class Utility {
+class Utility {
     private static Utility verificaEmail;
-    public Utility()
-    {
+    public Utility() {
 
     }
     public static Utility getUtility(){
