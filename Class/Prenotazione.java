@@ -8,7 +8,7 @@ class Prenotazione {
     private int num_biglietto;
     private int quantita;
     private String nominativo;
-    
+        
     public Prenotazione(String evento_prenotato, Date data_evento, String luogo_evento, int numero, int quantita_evento, String nominativo_evento) {
         evento = evento_prenotato;
         data = data_evento;
@@ -17,8 +17,6 @@ class Prenotazione {
         quantita = quantita_evento;
         nominativo = nominativo_evento;
     }
-
-    //public String Prenotazione() {}
 
     public String evento() {
         return evento;
@@ -44,4 +42,25 @@ class Prenotazione {
         return nominativo;
     }
 
+    public Boolean PrenotazionePossibile() {
+        Boolean esito = true;
+        int n;
+        if(n.num_biglietto() == num_biglietto) {
+            esito = false;
+        }
+        else{
+            esito = true;
+        }
+        return esito;
+    }
+    
+    public String Prenotazione() {
+        if(!PrenotazionePossibile()) {
+            return "Il biglietto non è disponibile";
+        }
+        else{
+
+            return "La prenotazione è avvenuta con successo";
+        }
+    }
 }
