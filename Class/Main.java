@@ -6,15 +6,17 @@ class Main{
 
         System.out.println("Benvenuto e grazie per aver scelto il nostro sito");
 
-        System.out.println(" Vuoi Registrarti? " + "Inserire si o no");  
-
         Scanner in = new Scanner(System.in);
-        String scelta = " ";
+        String scelta;
+        // Boolean bool = false;
         do{
-            scelta = in.next(); 
-        }while (scelta != "si" || scelta != "no");
+            System.out.println(" Vuoi Registrarti? " + "Inserire si o no"); 
+            scelta = in.next();
+            System.out.println("Hai scelto" + scelta);  
+
+        }while (scelta.compareTo("si") != 0 && scelta.compareTo("no") != 0);
         in.close();
-        if (scelta == "si"){
+        if (scelta.compareTo("si") == 0){
             //Registrazione
             System.out.println("Inserire email: ");
             String email_utente = in.next();
