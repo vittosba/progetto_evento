@@ -69,6 +69,37 @@ class Utility {
             
         
     }
+
+    public boolean verificaPassword(String password) {
+        if (password.length() >= 8) {
+            Boolean maiuscola = false;
+            Boolean minuscola = false;
+            Boolean numero = false;
+            Boolean speciale = false;
+            String specialChars = "/*!@#$%^&*()\"{}_[]|\\?/<>,.";
+            for (int i = 0; i < password.length(); i++) {
+                if (Character.isUpperCase(password.charAt(i))) {
+                    maiuscola = true;
+                }
+
+                if (Character.isLowerCase(password.charAt(i))) {
+                    minuscola = true;
+                }
+
+                if (Character.isDigit(password.charAt(i))) {
+                    numero = true;
+                }
+                if (specialChars.indexOf(password.charAt(i)) != -1) {
+                    speciale = true;
+                }
+            }
+
+            if (maiuscola && minuscola && numero && speciale) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
 
 

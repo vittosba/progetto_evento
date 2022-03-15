@@ -15,7 +15,6 @@ class Main{
             System.out.println("Hai scelto" + scelta);  
 
         }while (scelta.compareTo("si") != 0 && scelta.compareTo("no") != 0);
-        in.close();
         if (scelta.compareTo("si") == 0){
             //Registrazione
             System.out.println("Inserire email: ");
@@ -29,12 +28,14 @@ class Main{
             String cognome_utente = in.next();
             System.out.println("Inserire password: ");
             String password_utente = in.next();
-            //verifica registrazione tramite file
+            System.out.println(U.verificaPassword(password_utente));
+
+            // verifica registrazione tramite file
             Utente newUtente = new Utente(nome_utente, cognome_utente, email_utente, email_verificata_utente, password_utente);
 
             System.out.println( newUtente.Nome() + " " + newUtente.Cognome() + " " + newUtente.Email());
         }
-
+        in.close();
         System.out.println(" Vuoi Prenotarti? " + "Inserire si o no");
         
 
