@@ -3,7 +3,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.util.Scanner;
-//import java.util.Arrays;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.TreeSet;
 class Main{
 
     public static void main(String[] args) {
@@ -93,12 +97,31 @@ class Main{
                 }
         }
         in.close();
+        
+        int[] arr = new int[]{12,3,5,7,8,15,9};
+        Arrays.sort(arr);
+        for(int i = 0; i < arr.length; i++) {
+        System.out.println(arr[i]);
+        }
 
-        //int[] arr = new int[]{12,cane,5,gatto,8,15,9};
-        //Arrays.sort(arr);
-        //for(int i = 0; i < arr.length; i++) {
-        //System.out.println(arr[i]);
-        //}
+        ArrayList<Object> arrlist = new ArrayList<Object>();
+        arrlist.add("ciao");
+        arrlist.add(17);
+        for(int i = 0; i <arrlist.size(); i++){
+            System.out.println(arrlist.get(i).toString());
+        }
+
+        Set Number_Set = new HashSet(); 
+        Number_Set.add(12); 
+        Number_Set.add(4); 
+        Number_Set.add(2); 
+        Number_Set.add(6); 
+        Number_Set.add(9); 
+        System.out.print("Set contents:"); 
+        System.out.println(Number_Set); 
+        System.out.print("Sorted Set after converting to TreeSet:"); 
+        Set tree_Set = new TreeSet(Number_Set); 
+        System.out.println(tree_Set);
 
         System.out.println(" Vuoi Prenotarti? " + "Inserire si o no");        
     }
