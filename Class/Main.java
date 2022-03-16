@@ -111,16 +111,16 @@ class Main{
             System.out.println(arrlist.get(i).toString());
         }
 
-        Set Number_Set = new HashSet(); 
+        Set<Object> Number_Set = new HashSet<>(); 
         Number_Set.add(12); 
         Number_Set.add(4); 
         Number_Set.add(2); 
         Number_Set.add(6); 
         Number_Set.add(9); 
-        System.out.print("Set contents:"); 
+        System.out.print("Set:"); 
         System.out.println(Number_Set); 
-        System.out.print("Sorted Set after converting to TreeSet:"); 
-        Set tree_Set = new TreeSet(Number_Set); 
+        System.out.print("Sorted TreeSet:");
+        Set<Object> tree_Set = new TreeSet<>(Number_Set); 
         System.out.println(tree_Set);
 
         System.out.println(" Vuoi Prenotarti? " + "Inserire si o no");        
