@@ -1,4 +1,4 @@
-package Class;
+package Classi;
 class Assistenza {
     private String nome;
     private int cod_assistente;

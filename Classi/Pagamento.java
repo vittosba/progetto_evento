@@ -1,4 +1,4 @@
-package Class;
+package Classi;
 class Pagamento {
     private String tipo_pagamento;
     private String gestione_carta;

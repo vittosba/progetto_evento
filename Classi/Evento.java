@@ -1,4 +1,4 @@
-package Class;
+package Classi;
 import java.sql.Date;
 
 class Evento {

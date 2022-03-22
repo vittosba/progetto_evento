@@ -1,4 +1,4 @@
-package Class;
+package Classi;
 class Artista {
     private String nome;
     private String cognome;
