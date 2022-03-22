@@ -13,19 +13,19 @@ class Utente {
         password = password_utente;
     }
 
-    public String Nome() {
+    public String restituisceNome() {
         return nome;
     }
-    public String Cognome() {
+    public String restituisceCognome() {
         return cognome;
     }
-    public String Email() {
+    public String restituisceEmail() {
         return email;
     }
-    public Boolean Verifica() {
+    public Boolean restituisceVerifica() {
         return email_verificata;
     }
-    public String Password() {
+    public String restituiscePassword() {
         return password;
     }
 }

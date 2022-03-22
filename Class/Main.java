@@ -56,14 +56,14 @@ class Main{
             String nomeFile = "archivio.txt";
             try {
                 FileWriter fw = new FileWriter(nomeFile, true);
-                String linea = newUtente.Nome() + " " + newUtente.Cognome() + " " + newUtente.Email() + " " + newUtente.Password()+ " ";
+                String linea = newUtente.restituisceNome() + " " + newUtente.restituisceCognome() + " " + newUtente.restituisceEmail() + " " + newUtente.restituiscePassword()+ " ";
                 fw.write(linea + "\r\n");
                 fw.close();
             } catch (Exception e) {
             }
     
 
-            System.out.println( newUtente.Nome() + " " + newUtente.Cognome() + " " + newUtente.Email());
+            System.out.println( newUtente.restituisceNome() + " " + newUtente.restituisceCognome() + " " + newUtente.restituisceEmail());
 
             
             try{

@@ -18,23 +18,23 @@ class Prenotazione {
         nominativo = nominativo_evento;
     }
 
-    public String evento() {
+    public String restituisceEvento() {
         return evento;
     }
 
-    public Date Data() {
+    public Date restituisceData() {
         return data;
     }
 
-    public String Luogo() {
+    public String restituisceLuogo() {
         return luogo;
     }
 
-    public int Num_biglietto() {
+    public int restituisceNum_biglietto() {
         return num_biglietto;
     }
 
-    public int Quantita() {
+    public int restituisceQuantita() {
         return quantita;
     }
 
