@@ -21,20 +21,20 @@ class Evento {
     //public String Cancellazione_Evento() {}
     //public String Modifica_Evento() {}
 
-    public String Tipo() {
+    public String restituisceTipo() {
         return tipo;
     }
 
-    public Date Data(){
+    public Date restituisceData(){
         return data;
     }
-    public String Luogo(){
+    public String restituisceLuogo(){
         return luogo;
     }
-    public int Capacita_Persone(){
+    public int restituisceCapacitaPersone(){
         return capacita_persone;
     }
-    public String Artista(){
+    public String restituisceArtista(){
         return artista;
     }
 }
