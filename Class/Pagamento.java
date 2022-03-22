@@ -17,13 +17,13 @@ class Pagamento {
     public Boolean restituiscePagamento() {
         return pag;
     }
-    public String restituisceTipo_pagamento() {
+    public String restituisceTipoPagamento() {
         return tipo_pagamento;
     }
-    public String restituisceGestione_carta() {
+    public String restituisceGestioneCarta() {
         return gestione_carta;
     }
-    public int restituisceNum_carta() {
+    public int restituisceNumCarta() {
         return num_carta;
     }
     public int restituiscePin() {
