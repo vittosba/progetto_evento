@@ -10,13 +10,13 @@ class Artista {
         esibizione = esibizione_artista;
     }
 
-    public String Nome() {
+    public String restituisceNome() {
         return nome;
     }
-    public String Cognome() {
+    public String restituisceCognome() {
         return cognome;
     }
-    public String Esibizione() {
+    public String restituisceEsibizione() {
         return esibizione;
     }
 }

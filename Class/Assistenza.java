@@ -15,15 +15,15 @@ class Assistenza {
         Utente.Cognome();
         Utente.Email();
     }*/
-    public String Nome() {
+    public String restituisceNome() {
         return nome;
     }
 
-    public int Cod_Assistente() {
+    public int restituisceCodAssistente() {
         return cod_assistente;
     }
 
-    public int Num_pratiche() {
+    public int restituisceNumPratiche() {
         return num_pratiche;
     }
 }
