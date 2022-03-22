@@ -30,7 +30,7 @@ class Prenotazione {
         return luogo;
     }
 
-    public int restituisceNum_biglietto() {
+    public int restituisceNumBiglietto() {
         return num_biglietto;
     }
 
@@ -38,7 +38,7 @@ class Prenotazione {
         return quantita;
     }
 
-    public String Nominativo() {
+    public String restituisceNominativo() {
         return nominativo;
     }
 
