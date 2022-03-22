@@ -14,11 +14,11 @@ class Organizzatore_Evento {
 
     //public String Modifica_Evento() {}
 
-    public String Nome() {
+    public String restituisceNome() {
         return nome;
     }
 
-    public int Cod_Organizzatore() {
+    public int restituisceCodOrganizzatore() {
         return cod_organizzatore;
     }
 }

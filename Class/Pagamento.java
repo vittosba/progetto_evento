@@ -14,19 +14,19 @@ class Pagamento {
         pag = p;
     }
 
-    public Boolean pagamento() {
+    public Boolean restituiscePagamento() {
         return pag;
     }
-    public String Tipo_pagamento() {
+    public String restituisceTipo_pagamento() {
         return tipo_pagamento;
     }
-    public String Gestione_carta() {
+    public String restituisceGestione_carta() {
         return gestione_carta;
     }
-    public int Num_carta() {
+    public int restituisceNum_carta() {
         return num_carta;
     }
-    public int Pin() {
+    public int restituiscePin() {
         return pin;
     }
 }
