@@ -13,10 +13,10 @@ class Assistenza_Clienti{
     //public String Pagamento_assistito() {}
     //public String Gestione_Resi() {}
 
-    public String Nome_Utente() {
+    public String restituisceNomeUtente() {
         return nome_utente;
     }
-    public String Descrizione_Problema() {
+    public String restituisceDescrizioneProblema() {
         return descrizione_problema;
     }
 }
