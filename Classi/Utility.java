@@ -1,9 +1,8 @@
 package Classi;
 class Utility {
     private static Utility verificaEmail;
-    public Utility() {
-
-    }
+    public Utility() {}
+    
     public static Utility getUtility(){
         if (verificaEmail == null){
             verificaEmail = new Utility();
