@@ -1,5 +1,4 @@
 package Classi;
-//import java.sql.Date;
 
 class Prenotazione {
     private Evento evento;
