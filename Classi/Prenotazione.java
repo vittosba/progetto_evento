@@ -2,50 +2,26 @@ package Classi;
 //import java.sql.Date;
 
 class Prenotazione {
-    private String evento;
-    private String data;
-    private String luogo;
+    private Evento evento;
     private int num_biglietto;
-    private int quantita;
-    private String nominativo;
         
-    public Prenotazione(String evento_prenotato, String data_evento, String luogo_evento, int numero, int quantita_evento, String nominativo_evento) {
+    public Prenotazione(Evento evento_prenotato, int numero) {
         evento = evento_prenotato;
-        data = data_evento;
-        luogo = luogo_evento;
         num_biglietto = numero;
-        quantita = quantita_evento;
-        nominativo = nominativo_evento;
     }
 
-    public String restituisceEvento() {
+    public Evento restituisceEvento() {
         return evento;
-    }
-
-    public String restituisceData() {
-        return data;
-    }
-
-    public String restituisceLuogo() {
-        return luogo;
     }
 
     public int restituisceNumBiglietto() {
         return num_biglietto;
     }
 
-    public int restituisceQuantita() {
-        return quantita;
-    }
-
-    public String restituisceNominativo() {
-        return nominativo;
-    }
-
-    /*public Boolean PrenotazionePossibile() {
+    /**public Boolean PrenotazionePossibile() {
         Boolean esito = true;
         int n;
-        if(n.num_biglietto() == num_biglietto) {
+        if(n.restituisceNumBiglietto() == num_biglietto) {
             esito = false;
         }
         else{
