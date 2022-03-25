@@ -10,9 +10,6 @@ class Utility {
         }
         return verificaEmail;
     }
-    public enum tipo_Ammessi {
-        evento_musicale, evento_teatrale, evento_comico, evento_sportivo
-    }
 
     public boolean verificaCorrettezzaEmail(String email){
         int posChiocciola = email.indexOf("@");
