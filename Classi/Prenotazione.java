@@ -1,15 +1,15 @@
 package Classi;
-import java.sql.Date;
+//import java.sql.Date;
 
 class Prenotazione {
     private String evento;
-    private Date data;
+    private String data;
     private String luogo;
     private int num_biglietto;
     private int quantita;
     private String nominativo;
         
-    public Prenotazione(String evento_prenotato, Date data_evento, String luogo_evento, int numero, int quantita_evento, String nominativo_evento) {
+    public Prenotazione(String evento_prenotato, String data_evento, String luogo_evento, int numero, int quantita_evento, String nominativo_evento) {
         evento = evento_prenotato;
         data = data_evento;
         luogo = luogo_evento;
@@ -22,7 +22,7 @@ class Prenotazione {
         return evento;
     }
 
-    public Date restituisceData() {
+    public String restituisceData() {
         return data;
     }
 

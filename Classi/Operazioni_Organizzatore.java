@@ -8,7 +8,11 @@ public class Operazioni_Organizzatore {
     Utility U = new Utility();
     String scelta;
 
-    public void Esegui() {
+    public Operazioni_Organizzatore(Organizzatore_Evento newOrganizzatore){
+        organizzatore_evento = newOrganizzatore;
+    }
+
+    public void esegui() {
 
         do{
             System.out.println("Vuoi creare un nuovo evento? " + "Inserire 1");
@@ -23,6 +27,9 @@ public class Operazioni_Organizzatore {
         }
         else if(scelta.compareTo("2") == 0) {
             cancellazione();
+        }
+        else if(scelta.compareTo("3") == 0) {
+            modifica();
         }
     }
 
@@ -58,6 +65,30 @@ public class Operazioni_Organizzatore {
 
         organizzatore_evento.cancellazione_evento(data, luogo);
     }
-    
-    //public String Modifica_Evento() {}
+
+    public void modifica() {
+
+        System.out.println("Inserire la data dell'evento: ");
+        String data = in.next();
+
+        System.out.println("Inserire il luogo dell'evento: ");
+        String luogo = in.next();
+
+        System.out.println("Inserire il tipo di evento: ");;
+        String tipoMod = in.next();
+
+        System.out.println("Inserire la data dell'evento: ");
+        String dataMod = in.next();
+
+        System.out.println("Inserire il luogo dell'evento: ");
+        String luogoMod = in.next();
+        
+        System.out.println("Inserire il numero di massimo di persone che possono partecipare all'evento: ");
+        int capacita_personeMod = in.nextInt();
+        
+        System.out.println("Inserire l'artista che partecipa all'evento: ");
+        String artistaMod = in.next();
+
+        organizzatore_evento.modifica_evento(data, luogo, tipoMod, dataMod, luogoMod, capacita_personeMod, artistaMod);
+    }
 }
