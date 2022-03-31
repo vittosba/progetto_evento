@@ -1,14 +1,14 @@
 package Classi;
 class Organizzatore_Evento {
-    
-    private String nome;
+
     private int cod_organizzatore;
+    private String nome;
     public Evento[] listaEvento;
     int cont;
       
     public Organizzatore_Evento(String nome_organizzatore, int codice) {
-        nome = nome_organizzatore;
-        cod_organizzatore = codice;
+        setCod_organizzatore(cod_organizzatore);
+        setNome(nome);
         cont = 0;
         listaEvento = new Evento[cont+1];
     }
@@ -20,8 +20,8 @@ class Organizzatore_Evento {
 
     public boolean cancellazione_evento(String data, String luogo) {
         for (int i = 0; i < listaEvento.length; i++) {
-              String data_evento = listaEvento[i].restituisceData();
-              String luogo_evento = listaEvento[i].restituisceLuogo();
+              String data_evento = listaEvento[i].getData();
+              String luogo_evento = listaEvento[i].getLuogo();
               if (data_evento.equals(data) && luogo_evento.equals(luogo)) {
                 listaEvento[i] = listaEvento[cont - 1];
                 cont--;
@@ -33,8 +33,8 @@ class Organizzatore_Evento {
 
     public boolean modifica_evento(String data, String luogo, String tipoMod, String dataMod, String luogoMod, int capacita_personeMod, String artistaMod) {
         for (int i = 0; i < listaEvento.length; i++) {
-            String data_evento = listaEvento[i].restituisceData();
-            String luogo_evento = listaEvento[i].restituisceLuogo();
+            String data_evento = listaEvento[i].getData();
+            String luogo_evento = listaEvento[i].getLuogo();
             if (data_evento.equals(data) && luogo_evento.equals(luogo)) {
               listaEvento[i].setEvento(tipoMod, dataMod, luogoMod, capacita_personeMod, artistaMod);
               return true;
@@ -51,11 +51,17 @@ class Organizzatore_Evento {
         return cont;
     }
 
-    public String restituisceNome() {
-        return nome;
+    public void setCod_organizzatore(int cod_organizzatore) {
+        this.cod_organizzatore = cod_organizzatore;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public int restituisceCodOrganizzatore() {
+    public int getCod_organizzatore() {
         return cod_organizzatore;
+    }
+    public String getNome() {
+        return nome;
     }
 }
